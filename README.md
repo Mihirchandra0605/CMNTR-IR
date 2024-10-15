@@ -28,6 +28,11 @@ CMNTR is a command-line tool that allows users to create, index, edit, and searc
 
 ## Usage
 
+Before running any command, navigate to the `/interface` directory:
+```bash
+cd interface
+```
+
 CMNTR provides a set of commands to manage and retrieve notes. You can access these commands through the command-line interface.
 
 ### Create a New Note
