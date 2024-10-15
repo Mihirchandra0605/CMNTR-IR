@@ -39,62 +39,62 @@ CMNTR provides a set of commands to manage and retrieve notes. You can access th
 
 To create a new note:
 ```bash
-python cmntr.py create <filename>
+python3 cmntr.py create <filename>
 ```
 
 ### Edit an Existing Note
 
 To edit a note:
 ```bash
-python cmntr.py edit <filename> <new_text>
+python3 cmntr.py edit <filename> <new_text>
 ```
 
 ### Index a Note
 
 To index a note for searching:
 ```bash
-python cmntr.py index_note <filename>
+python3 cmntr.py index_note <filename>
 ```
 
 ### Delete a Note
 
 To delete a note:
 ```bash
-python cmntr.py delete <filename>
+python3 cmntr.py delete <filename>
 ```
 
 ### Query Notes
 
 To search for similar notes using a code-mixed query:
 ```bash
-python cmntr.py query "<query_text>"
+python3 cmntr.py query "<query_text>"
 ```
 
 ## Example
 
 1. Create a new note:
    ```bash
-   python cmntr.py create "my_note.txt"
+   python3 cmntr.py create "my_note.txt"
    ```
 
 2. Edit the note:
    ```bash
-   python cmntr.py edit "my_note.txt" "This is a test note."
+   python3 cmntr.py edit "my_note.txt" "This is a test note."
    ```
 
 3. Index the note for searching:
    ```bash
-   python cmntr.py index_note "my_note.txt"
+   python3 cmntr.py index_note "my_note.txt"
    ```
 
 4. Query the notes:
    ```bash
-   python cmntr.py query "test note"
+   python3 cmntr.py query "test note"
    ```
 
 5. Delete the note:
    ```bash
-   python cmntr.py delete "my_note.txt"
+   python3 cmntr.py delete "my_note.txt"
    ```
 
 ## License
