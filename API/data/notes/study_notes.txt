@@ -1,0 +1,1 @@
+Machine Learning చొన్చెప్త్స revision ఛెసను today : 1 . Neural నెతwఒర్క్స బసిచ్స అర్థం చేసుకున్నాను 2 . బచ్క్ప్రొపగతిఒన algorithm implementation చేశాను 3 . Gradient descent చల్చులతిఒన్స practice చేశాను Next week exam కి preparation start చేయాలి .
