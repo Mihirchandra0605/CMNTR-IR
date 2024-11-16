@@ -10,101 +10,214 @@ CMNTR is a command-line tool that allows users to create, index, edit, and searc
 - **Index notes** for efficient searching and retrieval.
 - **Search notes** using code-mixed queries to find the most relevant results.
 - **Delete notes** along with their indexed embeddings.
+- **Auto Suggestion** to help powerful query generation
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/CMNTR.git
-   cd CMNTR
-   ```
-
-2. Install the required dependencies (if any):
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Ensure that the `retrievalAPI.py` and `indexerAPI.py` are located in the `API` directory.
-
-## Usage
-
-Before running any command, navigate to the `/interface` directory:
-```bash
-cd interface
-```
-
-CMNTR provides a set of commands to manage and retrieve notes. You can access these commands through the command-line interface.
-
-### Create a New Note
-
-To create a new note:
-```bash
-python3 cmntr.py create <filename>
-```
-
-### Edit an Existing Note
-
-To edit a note:
-```bash
-python3 cmntr.py edit <filename> <new_text>
-```
-
-### Index a Note
-
-To index a note for searching:
-```bash
-python3 cmntr.py index_note <filename>
-```
-
-### Delete a Note
-
-To delete a note:
-```bash
-python3 cmntr.py delete <filename>
-```
-
-### Query Notes
-
-To search for similar notes using a code-mixed query:
-```bash
-python3 cmntr.py query "<query_text>"
-```
-
-## Example
-
-1. Create a new note:
-   ```bash
-   python3 cmntr.py create "my_note.txt"
-   ```
-
-2. Edit the note:
-   ```bash
-   python3 cmntr.py edit "my_note.txt" "This is a test note."
-   ```
-
-3. Index the note for searching:
-   ```bash
-   python3 cmntr.py index_note "my_note.txt"
-   ```
-
-4. Query the notes:
-   ```bash
-   python3 cmntr.py query "test note"
-   ```
-
-5. Delete the note:
-   ```bash
-   python3 cmntr.py delete "my_note.txt"
-   ```
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request with your changes.
 
-## Contact
 
-For any questions, feel free to reach out at your-email@example.com.
+
+---
+
+## Prerequisites
+
+Before using this tool, ensure the following:
+
+1. **Python Version**: Python 3.7 or higher installed on your system.
+2. **Dependencies**: Required libraries installed (detailed below).
+
+---
+
+## Installation Guide
+
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/vihaan-that/CMNTR
+   cd CMNTR
+   ```
+
+2. Navigate to the **interface** folder:
+   ```bash
+   cd interface
+   ```
+
+3. Install the required Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Ensure all APIs are properly set up:
+   - The `IndexerAPI`, `RetrievalAPI`, and `WordPredictAPI` Python files should be located in the `API` folder.
+
+5. Verify the `data` directories:
+   - `notes` directory will hold all note files.
+   - `embeddings` directory will store embeddings for indexed notes.
+   - These directories are created automatically if they do not exist.
+
+---
+
+## Usage
+
+Run the CLI tool using the following command:
+```bash
+python CLIR.py <command> [arguments]
+```
+
+### Available Commands
+
+1. **`create`**  
+   Create a new note.
+   ```bash
+   python CLIR.py create <filename>
+   ```
+   - **Example**: 
+     ```bash
+     python CLIR.py create my_note
+     ```
+
+2. **`edit`**  
+   Edit an existing note by appending content.
+   ```bash
+   python CLIR.py edit <filename> <text>
+   ```
+   - **Example**: 
+     ```bash
+     python CLIR.py edit my_note "Adding new content to the note."
+     ```
+
+3. **`delete`**  
+   Delete a note and its associated embeddings.
+   ```bash
+   python CLIR.py delete <filename>
+   ```
+   - **Example**:
+     ```bash
+     python CLIR.py delete my_note
+     ```
+
+4. **`search`**  
+   Search notes for content matching the query text.
+   ```bash
+   python CLIR.py search <query_text> [--top-k <number>]
+   ```
+   - **Example**:
+     ```bash
+     python CLIR.py search "important content" --top-k 5
+     ```
+
+5. **`list`**  
+   List all available notes with metadata (size, modification time, and indexing status).
+   ```bash
+   python CLIR.py list
+   ```
+
+6. **`show`**  
+   Display the content of a specific note.
+   ```bash
+   python CLIR.py show <filename>
+   ```
+   - **Example**:
+     ```bash
+     python CLIR.py show my_note
+     ```
+
+7. **`predict`**  
+   Predict the next word based on the provided context.
+   ```bash
+   python CLIR.py predict <context> [--top-k <number>]
+   ```
+   - **Example**:
+     ```bash
+     python CLIR.py predict "The quick brown" --top-k 3
+     ```
+
+8. **`train_predictor`**  
+   Retrain the word prediction model using all notes.
+   ```bash
+   python CLIR.py train_predictor
+   ```
+
+9. **`debug`**  
+   Display debugging information about directories and files.
+   ```bash
+   python CLIR.py debug
+   ```
+
+10. **`check_notes`**  
+    List and debug all files in the notes directory.
+    ```bash
+    python CLIR.py check_notes
+    ```
+
+---
+
+## Directory Structure
+
+```
+<repository-folder>
+│
+├── API/
+│   ├── indexerAPI.py          # Indexing functionality
+│   ├── retrievalAPI.py        # Retrieval functionality
+│   └── wordPredictAPI.py      # Word prediction functionality
+│
+├── interface/
+│   ├── CLIR.py                # Main CLI tool
+│   └── requirements.txt       # Python dependencies
+│
+├── data/
+│   ├── notes/                 # Directory for storing note files
+│   └── embeddings/            # Directory for storing embeddings
+│
+└── README.md                  # This file
+```
+
+---
+
+## Examples
+
+### Creating and Editing Notes
+1. Create a note:
+   ```bash
+   python CLIR.py create sample_note
+   ```
+2. Edit the note with additional content:
+   ```bash
+   python CLIR.py edit sample_note "This is a new line."
+   ```
+
+### Searching and Viewing Notes
+1. Search for a keyword:
+   ```bash
+   python CLIR.py search "important data" --top-k 2
+   ```
+2. View a specific note:
+   ```bash
+   python CLIR.py show sample_note
+   ```
+
+### Debugging and Checking Notes
+1. Debug directories and file setups:
+   ```bash
+   python CLIR.py debug
+   ```
+2. Check all notes in the directory:
+   ```bash
+   python CLIR.py check_notes
+   ```
+
+---
+
+## Notes
+
+- **Environment Variables**: The directories for notes and embeddings are managed using the following environment variables:
+  - `NOTES_DIRECTORY`
+  - `EMBEDDINGS_DIRECTORY`
+
+- **Error Handling**: Clear error messages are provided for missing files, failed directory creation, or API-related issues.
+
+---
+
+Enjoy managing your code-mixed Telugu-English notes efficiently!
