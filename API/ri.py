@@ -167,7 +167,12 @@ def make_ri_vecs(nr, dimen, nonzeros):
         rivecs.append(rive)
         cnt += 1
     return rivecs
-
+    
+def calculate_similarity(vec1, vec2):
+    """Calculate cosine similarity between two vectors."""
+    if np.any(vec1) and np.any(vec2):  # Ensure vectors are not all zeros
+        return 1 - st.distance.cosine(vec1, vec2)
+    return 0.0
 ####################################
 # Online ngrams
 ####################################
