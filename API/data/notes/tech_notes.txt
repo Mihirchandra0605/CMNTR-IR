@@ -1,0 +1,1 @@
+సొfతwఅరె Development meeting నొతెస : - New fఎఅతురెస implement చేయడానికి తిమెలినె set చేశాము - Bug fఇxఎస priority list create చేశాము - Testing team తో చోర్దినతిఒన improve చేయాలి - Code optimization చేయాలి next sprint లో - Documentation update చేయడం pending లో ఉంది Next week release కి prepare అవుతున్నాము .

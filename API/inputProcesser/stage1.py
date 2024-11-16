@@ -1,15 +1,24 @@
 import nltk
+import os
+import sys
+from contextlib import redirect_stdout, redirect_stderr
+from io import StringIO
 from nltk.corpus import words
 from nltk.tokenize import word_tokenize
 import string
 import pandas as pd
-import os
 import csv
 import logging
 
-# Ensure NLTK data is downloaded
-nltk.download('punkt')
-nltk.download('words')
+with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt', quiet=True)
+    try:
+        nltk.data.find('corpora/words')
+    except LookupError:
+        nltk.download('words', quiet=True)
 
 def label_words_in_sentences(input_csv, output_labeled_csv, output_telugu_csv, conversion_input_csv):
     """
@@ -130,7 +139,17 @@ def replace_transliterated_words(original_input_csv, transliteration_csv, final_
         final_output_csv (str): Path to save the final modified sentences.
     """
     # Ensure NLTK data is downloaded
-    nltk.download('punkt')
+    with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+        try:
+            nltk.data.find('tokenizers/punkt')
+        except LookupError:
+            nltk.download('punkt', quiet=True)
+        try:
+            nltk.data.find('corpora/words')
+        except LookupError:
+            nltk.download('words', quiet=True)
+
+
 
     # Step 1: Read the original input sentences from the input CSV file
     df_input = pd.read_csv(original_input_csv)

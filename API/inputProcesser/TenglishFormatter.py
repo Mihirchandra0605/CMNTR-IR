@@ -1,6 +1,10 @@
 import logging
 import os
 import pandas as pd
+import sys
+# Add the current directory to Python path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
 
 # Ensure the functions from stage1.py are available
 from stage1 import (
