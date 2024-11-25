@@ -234,30 +234,34 @@ python CLIR.py <command> [arguments]
 ## TESTING
 # Creating Notes
 ```bash
-python CLIR.py create note_1 && python CLIR.py edit note_1 "Life lo manaki eppudu chala choices untayi, kani sometimes manam confusion lo padipothamu. 
-    Example, future goals gurinchi ekkuva think cheyyadam leads to overthinking. 
-    Take time, analyze cheyyi, and decide wisely."
-python CLIR.py create note_2 && python CLIR.py edit note_2 "Telugu culture chala rich and vibrant undhi. Festivals like Sankranti and Dasara lo 
-    manam enjoy cheyyadam ki chala opportunities untayi. Mari language ni next generation ki 
-    pass cheyyadam kuda chaala important."
-python CLIR.py create note_3 && python CLIR.py edit note_3 "Learning new skills eppudu easy kaadu, kani consistent practice tho edhaina achieve cheyyachu. 
-    Remember, patience is key. Slow and steady ga me goal ni reach avvandi."
-python CLIR.py create note_4 && python CLIR.py edit note_4 "Traveling to new places chaala excitement ni isthundi. Andaru at least 
-    oka sari memorable road trip try cheyyandi, especially Andhra and Telangana lo 
-    chala scenic locations unnayi."
-python CLIR.py create note_5 && python CLIR.py edit note_5 "Fitness maintain cheyyadam manaki chala important. Regular exercise and proper 
-    diet tho mana body and mind balanced ga untayi. Time invest cheyyandi health improvement kosam."
+python CLIR.py create note1 && python CLIR.py edit note1 "Nenu Hyderabad lo unna prathi chota chai kalagalanu. The Irani chai at Charminar is world-famous. Tasty food and friendly people are the highlights of this city. Nenu regular ga evening lo street food tinataniki veli untanu. Hyderabad lo, gola ice creams chala popular. The climate is unique – sometimes rainy, sometimes sunny. Chala interesting vibe undi e city ki. Charminar lo photos teeyadam is a must for tourists. The architecture is breathtaking. Meeku biryani nachite, definitely try Paradise or Shah Ghouse. Naku best anipinchindi. Hyderabad has something for everyone – techies ki IT parks, students ki education hubs, and families ki malls. The people here are known for their welcoming attitude. Visiting places like Necklace Road, Tank Bund, and Salar Jung Museum are always fun. Hyderabad lo okka sari visit chesthe, you'll definitely feel at home."
+
+python CLIR.py create note2 && python CLIR.py edit note2 "E weekend lo, beach ki vellamu. Vizag lo RK Beach super untundi. Morning sunrise chudadam, waves tho play cheyadam, and photography chala enjoy chesamu. Akkada fresh fish fry and cool drinks tinte chala baguntadi. Beachside stalls lo souvenirs konadam chala thrilling ga anipinchindi. Vizag city ni clean and green cheyyali ani chala efforts chestunaru government. Nenu family tho Submarine Museum ki kuda veltanu. Submarine lo entry experience matram must-try. Dolphin’s Nose view point chala scenic ga untadi. Vizag lo tourism ki baga scope undi. Weekend lo Vizag plan chesthe, miru kuda chala enjoy chestaru. Oka chinna beach vacation ki Vizag perfect destination!"
+
+python CLIR.py create note3 && python CLIR.py edit note3 "Amma nenu konni gadgets online order chesanu. Amazon lo sales unnappudu discounts baaga vasthayi. Nenu oka smartphone, wireless earphones, and smart watch tisukunnanu. Smartphone tho photos chala clarity ga vachayi. Naaku smart watch notifications feature chala nachindi. Emi chesthunna, calls and messages alert vaste, work chala easy aipothundi. Morning lo earphones pettukoni walks kuda start chesanu. Music tho start chesina day full ga energetic ga untundi. Online shopping lo offers pedithe, offline shopping kanna better ani naaku anipistundi. Gadgets quality and return options kuda manchiga vunnayi. Na next plan home automation gadgets teesukodaniki. Smart home chala convenient untundi ani telustondi."
+
+python CLIR.py create note4 && python CLIR.py edit note4 "Library lo spend chese time naaku chala nachindi. Books tho nenu full time busy untanu. Fiction novels chadive interest undi naaku. Daniki Telugu literature add chesanu. Peddapuli and Viswanatha Satyanarayana writings naaku favourite. Classroom lo, Telugu poetry discuss chesinappudu, discussions chala inspiring ga untayi. E weekend, Shakespeare’s plays kuda start chesanu. Online PDFs tho, mana library resources kuda use chestanu. Library atmosphere chala calm ga untadi. Chala varaku students library lo digital resources use chestunaru. Naku study breaks lo short stories chadive habit vundi. Rendu cultures blend chesukuni reading chesina feeling inko level lo untadi."
+
+python CLIR.py create note5 && python CLIR.py edit note5 "Cinema ante naaku chala ishtam. Theatres lo Telugu movies chudadam lo euphoria untadi. Friends tho weekend lo latest movies chudatam common ga chestamu. Last week, Nani movie chusamu. Storyline, acting anni mind-blowing. Popcorn, cold drinks tho time pass cheyadam and special theatres experience antha worth untadi. Nenu OTT platforms lo old classics kuda chustanu. Amazon, Netflix lo Telugu content baaga vuntadi. Action and family drama movies are my favourite. Movies ki unna background music anni scenes ki soul istundi ani naaku anipistadi. Movies chudatam kuda oka relaxation therapy la untundi!"
+
 ```
 # Testing Search
 ```bash
-python CLIR.py search "overthinking goals" --top-k 3
-python CLIR.py search "culture language" --top-k 3
+python CLIR.py search "Hyderabad lo best biryani ekkada?" --top-k 3
+python CLIR.py search "Vizag lo Dolphin Nose ki ela vellali?" --top-k 2
+python CLIR.py search "Amazon lo sales time lo best gadgets" --top-k 3
+python CLIR.py search "Telugu poetry classroom discussions" --top-k 5
+python CLIR.py search "Latest Telugu movies theatres lo chudali" --top-k 3
 ```
 
 # Testing Word Prediction
 ```bash
-python CLIR.py predict "Traveling to" --top-k 3
-python CLIR.py predict "Fitness maintain" --top-k 3
+python CLIR.py predict "Hyderabad lo best chai" --top-k 3
+python CLIR.py predict "Vizag lo beach lo" --top-k 3
+python CLIR.py predict "Amazon lo discounts" --top-k 3
+python CLIR.py predict "Library lo fiction novels" --top-k 3
+python CLIR.py predict "Cinema lo storylines" --top-k 3
+python CLIR.py predict "Smartwatch notifications" --top-k 3
 ```
 ---
 
