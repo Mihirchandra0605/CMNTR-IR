@@ -231,5 +231,34 @@ python CLIR.py <command> [arguments]
 - **Error Handling**: Clear error messages are provided for missing files, failed directory creation, or API-related issues.
 
 ---
+## TESTING
+# Creating Notes
+```bash
+python CLIR.py create note_1 && python CLIR.py edit note_1 "Life lo manaki eppudu chala choices untayi, kani sometimes manam confusion lo padipothamu. 
+    Example, future goals gurinchi ekkuva think cheyyadam leads to overthinking. 
+    Take time, analyze cheyyi, and decide wisely."
+python CLIR.py create note_2 && python CLIR.py edit note_2 "Telugu culture chala rich and vibrant undhi. Festivals like Sankranti and Dasara lo 
+    manam enjoy cheyyadam ki chala opportunities untayi. Mari language ni next generation ki 
+    pass cheyyadam kuda chaala important."
+python CLIR.py create note_3 && python CLIR.py edit note_3 "Learning new skills eppudu easy kaadu, kani consistent practice tho edhaina achieve cheyyachu. 
+    Remember, patience is key. Slow and steady ga me goal ni reach avvandi."
+python CLIR.py create note_4 && python CLIR.py edit note_4 "Traveling to new places chaala excitement ni isthundi. Andaru at least 
+    oka sari memorable road trip try cheyyandi, especially Andhra and Telangana lo 
+    chala scenic locations unnayi."
+python CLIR.py create note_5 && python CLIR.py edit note_5 "Fitness maintain cheyyadam manaki chala important. Regular exercise and proper 
+    diet tho mana body and mind balanced ga untayi. Time invest cheyyandi health improvement kosam."
+```
+# Testing Search
+```bash
+python CLIR.py search "overthinking goals" --top-k 3
+python CLIR.py search "culture language" --top-k 3
+```
+
+# Testing Word Prediction
+```bash
+python CLIR.py predict "Traveling to" --top-k 3
+python CLIR.py predict "Fitness maintain" --top-k 3
+```
+---
 
 Enjoy managing your code-mixed Telugu-English notes efficiently!
