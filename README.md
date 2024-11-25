@@ -1,8 +1,20 @@
 
-# CMNTR - Code Mixed Note Taking and Retrieval
+# CMNTR - Code Mixed Note-Taking and Retrieval
 
-CMNTR is a command-line tool that allows users to create, index, edit, and search notes written in a code-mixed format of Telugu and English, using Roman script. It offers an efficient way to manage notes where users can search for them using queries in the same code-mixed style.
+CMNTR is a **personalized note-taking application** that evolves with you, adapting to your unique writing style in code-mixed Telugu and English (Roman script). It provides a seamless experience for creating, managing, and retrieving notes with advanced features like **context-aware search**. CMNTR learns your code-switching patterns and understands your context, offering a tailored experience as you use it.
 
+---
+
+## Why Choose CMNTR?
+
+- **Personalized Experience**: CMNTR grows with you, adapting to your language preferences and writing habits.
+- **Seamless Code-Mixing**: Optimized for Telugu-English code-mixed notes in Roman script.
+- **Powerful Search**: Retrieve notes effortlessly using natural, code-mixed queries.
+- **Context-Aware Suggestions**: Generates meaningful auto-suggestions based on your patterns.
+- **Efficient Organization**: Index and manage notes with ease.
+- **User-Centric Design**: Ideal for students, researchers, and professionals working in bilingual contexts.
+
+---
 ## Features
 
 - **Create notes** in code-mixed Telugu and English using Roman script.
